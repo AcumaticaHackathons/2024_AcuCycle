@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <ACUPath>..\..\..\..\AcuInstances</ACUPath>
+    <ACUInstance>Hackathon</ACUInstance>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
@@ -21,32 +24,42 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>$(ACUPath)\$(ACUInstance)\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>$(ACUPath)\$(ACUInstance)\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PX.Common">
-      <HintPath>..\..\..\..\..\AcuInstances\Hackathon\Bin\PX.Common.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>$(ACUPath)\$(ACUInstance)\Bin\PX.Common.dll</HintPath>
     </Reference>
     <Reference Include="PX.Common.Std">
-      <HintPath>..\..\..\..\..\AcuInstances\Hackathon\Bin\PX.Common.Std.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>$(ACUPath)\$(ACUInstance)\Bin\PX.Common.Std.dll</HintPath>
     </Reference>
     <Reference Include="PX.CS.Contracts">
-      <HintPath>..\..\..\..\..\AcuInstances\Hackathon\Bin\PX.CS.Contracts.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>$(ACUPath)\$(ACUInstance)\Bin\PX.CS.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="PX.Data">
-      <HintPath>..\..\..\..\..\AcuInstances\Hackathon\Bin\PX.Data.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>$(ACUPath)\$(ACUInstance)\Bin\PX.Data.dll</HintPath>
     </Reference>
     <Reference Include="PX.Objects">
-      <HintPath>..\..\..\..\..\AcuInstances\Hackathon\Bin\PX.Objects.DLL</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>$(ACUPath)\$(ACUInstance)\Bin\PX.Objects.DLL</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
