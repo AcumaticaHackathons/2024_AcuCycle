@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PX.Api.Webhooks</name>
+    </assembly>
+    <members>
+        <member name="M:PX.Api.Webhooks.HttpRequestMessageExtensions.DependencyScope.System#Web#Http#Dependencies#IDependencyScope#GetService(System.Type)">
+            <returns>An instance of the service, or null if the service is not found.</returns>
+        </member>
+        <member name="M:PX.Api.Webhooks.HttpRequestMessageExtensions.DependencyScope.System#Web#Http#Dependencies#IDependencyScope#GetServices(System.Type)">
+            <returns>An enumeration (possibly empty) of the service.</returns>
+        </member>
+    </members>
+</doc>
