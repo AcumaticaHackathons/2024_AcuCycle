@@ -1,5 +1,6 @@
 ﻿using System;
 using PX.Data;
+using PX.Objects.IN;
 
 namespace AcuCycle
 {
@@ -8,7 +9,8 @@ namespace AcuCycle
     public class RecycleSetup : IBqlTable
     {
         #region SiteID
-        [PXDBInt()]
+        //[PXDBInt()]
+        [Site]
         [PXUIField(DisplayName = "Recycle Warehouse")]
         public virtual int? SiteID { get; set; }
         public abstract class siteID : PX.Data.BQL.BqlInt.Field<siteID> { }
