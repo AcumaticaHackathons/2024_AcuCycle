@@ -7,8 +7,8 @@
     <ProjectGuid>{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AcuCares</RootNamespace>
-    <AssemblyName>AcuCares</AssemblyName>
+    <RootNamespace>AcuCycle</RootNamespace>
+    <AssemblyName>AcuCycle</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
