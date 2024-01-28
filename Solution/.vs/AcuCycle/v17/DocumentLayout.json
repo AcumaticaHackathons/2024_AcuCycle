@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\C#\\Hackthon_2024\\Solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|d:\\c#\\hackthon_2024\\solution\\acucycle\\dac\\acrecycledetails .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|solutionrelative:acucycle\\dac\\acrecycledetails .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|d:\\c#\\hackthon_2024\\solution\\acucycle\\graph\\acrecycleentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|solutionrelative:acucycle\\graph\\acrecycleentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|d:\\c#\\hackthon_2024\\solution\\acucycle\\dac\\acrecycleheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,8 +23,8 @@
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|solutionrelative:acucycle\\common\\recycleautonumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|d:\\c#\\hackthon_2024\\solution\\acucycle\\graph\\acrecycleentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|solutionrelative:acucycle\\graph\\acrecycleentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|d:\\c#\\hackthon_2024\\solution\\acucycle\\dac\\acrecycledetails .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|solutionrelative:acucycle\\dac\\acrecycledetails .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|AcuCycle\\AcuCycle.csproj|d:\\c#\\hackthon_2024\\solution\\acucycle\\graph\\acrecyclesetupmaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,12 +61,8 @@
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "ACRecycleDetails .cs",
               "DocumentMoniker": "D:\\C#\\Hackthon_2024\\Solution\\AcuCycle\\DAC\\ACRecycleDetails .cs",
               "RelativeDocumentMoniker": "AcuCycle\\DAC\\ACRecycleDetails .cs",
@@ -92,13 +88,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ACRecycleEntry.cs",
               "DocumentMoniker": "D:\\C#\\Hackthon_2024\\Solution\\AcuCycle\\Graph\\ACRecycleEntry.cs",
               "RelativeDocumentMoniker": "AcuCycle\\Graph\\ACRecycleEntry.cs",
               "ToolTip": "D:\\C#\\Hackthon_2024\\Solution\\AcuCycle\\Graph\\ACRecycleEntry.cs",
               "RelativeToolTip": "AcuCycle\\Graph\\ACRecycleEntry.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAJAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAwDQAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-27T22:37:55.353Z",
               "EditorCaption": ""
@@ -111,7 +107,7 @@
               "RelativeDocumentMoniker": "AcuCycle\\Graph\\ACRecycleWizard.cs",
               "ToolTip": "D:\\C#\\Hackthon_2024\\Solution\\AcuCycle\\Graph\\ACRecycleWizard.cs",
               "RelativeToolTip": "AcuCycle\\Graph\\ACRecycleWizard.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAQwDgAAAARAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAuwCcAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-27T22:38:19.374Z",
               "EditorCaption": ""
