@@ -1,0 +1,49 @@
+﻿<WikiArticle>
+    <data-set>
+        <relations format-version="3" relations-version="20160101" main-table="WikiPage">
+            <link from="WikiAccessRights (PageID)" to="WikiPage (PageID)" />
+            <link from="WikiPageLanguage (PageID)" to="WikiPage (PageID)" />
+            <link from="WikiRevision (PageID, Language, PageRevisionID)" to="WikiPageLanguage (PageID, Language, LastRevisionID)" />
+            <link from="WikiRevision (UID)" to="Dual (UID)" type="NewUID" />
+            <link from="WikiPage (PageID)" to="WikiDescriptor (PageID)" type="ToMaster" updateable="False" />
+            <link from="WikiDescriptor (PageID)" to="WikiDescriptorExt (PageID)" type="ToMaster" updateable="False" />
+            <link from="WikiCss (CssID)" to="WikiDescriptor (CssID)" />
+            <link from="WikiFileInPage (PageID, Language, PageRevisionID)" to="WikiRevision (PageID, Language, PageRevisionID)" />
+            <link from="WikiFileInPage (FileID)" to="UploadFile (FileID)" type="ToMaster" updateable="False" />
+            <link from="UploadFileRevision (FileID, FileRevisionID)" to="UploadFile (FileID, LastRevisionID)" />
+            <link from="WikiPage (PageID)" to="WikiPage (WikiID)" type="ToMaster" updateable="False" />
+            <link from="WikiArticle (PageID)" to="WikiPage (PageID)" />
+            <link from="SiteMap (NodeID)" to="WikiPage (PageID)" />
+        </relations>
+        <layout>
+            <table name="WikiPage" recursion="(PageID) = (WikiID)">
+                <table name="WikiAccessRights" uplink="(PageID) = (PageID)" />
+                <table name="WikiPageLanguage" uplink="(PageID) = (PageID)">
+                    <table name="WikiRevision" uplink="(PageID, Language, LastRevisionID) = (PageID, Language, PageRevisionID)">
+                        <table name="WikiFileInPage" uplink="(PageID, Language, PageRevisionID) = (PageID, Language, PageRevisionID)" />
+                        <table name="Dual" uplink="(UID) = (UID)" />
+                    </table>
+                </table>
+                <table name="WikiArticle" uplink="(PageID) = (PageID)" />
+                <table name="SiteMap" uplink="(PageID) = (NodeID)" />
+            </table>
+            <table name="WikiDescriptor">
+                <table name="WikiCss" uplink="(CssID) = (CssID)" />
+            </table>
+            <table name="WikiDescriptorExt" />
+            <table name="UploadFile">
+                <table name="UploadFileRevision" uplink="(FileID, LastRevisionID) = (FileID, FileRevisionID)" />
+            </table>
+        </layout>
+        <data>
+            <WikiPage>
+                <row PageID="f7f21619-e7d2-4ee2-af8c-60c35dad228a" WikiID="ea94b68b-3aa0-4a4d-b4c1-fbe7e7c8d131" ArticleType="10" ParentUID="ea94b68b-3aa0-4a4d-b4c1-fbe7e7c8d131" Number="18" Name="Sludge" Folder="0" Versioned="1" StatusID="3" IsHtml="0" NoteID="95c5e4d6-09be-ee11-835c-1293d93768b3">
+                    <WikiPageLanguage Language="en-US" Title="Sludge" LastRevisionID="4" LastPublishedID="4" LastPublishedDateTime="2024-01-29 02:31:34.45">
+                        <WikiRevision Content="&lt;img src=&quot;../Frames/GetFile.ashx?fileID=85362c24-0bb9-4e84-9cdc-0c634b74ce18&quot; width = &quot;100%&quot;&gt;" PlainText="" ApprovalByID="b5344897-037e-4d58-b5c3-1bdfd0f47bf9" ApprovalDateTime="2024-01-29 02:31:34.45" />
+                    </WikiPageLanguage>
+                    <WikiArticle />
+                </row>
+            </WikiPage>
+        </data>
+    </data-set>
+</WikiArticle>

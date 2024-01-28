@@ -6,7 +6,6 @@
 			<px:PXDataSource ID="ds" runat="server" Visible="True" Width="100%" TypeName="AcuCycle.ACRecycleWizard"
 				PrimaryView="Filter">
 				<CallbackCommands>
-
 				</CallbackCommands>
 			</px:PXDataSource>
 		</asp:Content>

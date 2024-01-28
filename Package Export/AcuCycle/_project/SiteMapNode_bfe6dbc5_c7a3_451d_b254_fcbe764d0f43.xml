@@ -26,11 +26,13 @@
         <data>
             <SiteMap>
                 <row Position="21517" Title="Recycling Preferences" Url="~/Pages/AC/AC100000.aspx" ScreenID="AC100000" NodeID="bfe6dbc5-c7a3-451d-b254-fcbe764d0f43" ParentID="00000000-0000-0000-0000-000000000000" SelectedUI="E">
-                    <MUIScreen IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="10" SubcategoryID="8a93637d-b507-4667-a739-adaf6fb5f7ea" />
+                    <MUIScreen IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="10" SubcategoryID="8a93637d-b507-4667-a739-adaf6fb5f7ea">
+                        <MUIPinnedScreen IsPortal="0" Username="" IsPinned="1" />
+                    </MUIScreen>
                 </row>
             </SiteMap>
             <MUIWorkspace>
-                <row IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="875" Title="AcuCycle" Icon="refresh" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" IsSystem="0" />
+                <row IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="16" Title="AcuCycle" Icon="refresh" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" IsSystem="0" />
             </MUIWorkspace>
             <MUISubcategory>
                 <row IsPortal="0" SubcategoryID="8a93637d-b507-4667-a739-adaf6fb5f7ea" Order="1391.813" Name="Preferences" Icon="" IsSystem="0" />

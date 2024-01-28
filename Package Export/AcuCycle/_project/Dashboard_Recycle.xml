@@ -1,0 +1,336 @@
+﻿<Dashboard>
+    <data-set>
+        <relations format-version="3" relations-version="20230921" main-table="Dashboard">
+            <link from="DashboardParameter (DashboardID)" to="Dashboard (DashboardID)" />
+            <link from="DashboardParameter (NoteID)" to="DashboardParameterKvExt (RecordID)" type="RowKvExt" />
+            <link from="Widget (DashboardID)" to="Dashboard (DashboardID)" type="WeakIfEmpty" isEmpty="OwnerName" />
+            <link from="Widget (NoteID)" to="WidgetKvExt (RecordID)" type="RowKvExt" />
+            <link from="SiteMap (ScreenID)" to="Dashboard (ScreenID)" />
+            <link from="MUIScreen (NodeID)" to="SiteMap (NodeID)" />
+            <link from="MUIWorkspace (WorkspaceID)" to="MUIScreen (WorkspaceID)" type="FromMaster" linkname="workspaceToScreen" split-location="yes" updateable="True" />
+            <link from="MUISubcategory (SubcategoryID)" to="MUIScreen (SubcategoryID)" type="FromMaster" updateable="True" />
+            <link from="MUITile (ScreenID)" to="SiteMap (ScreenID)" />
+            <link from="MUIWorkspace (WorkspaceID)" to="MUITile (WorkspaceID)" type="FromMaster" linkname="workspaceToTile" split-location="yes" updateable="True" />
+            <link from="MUIArea (AreaID)" to="MUIWorkspace (AreaID)" type="FromMaster" updateable="True" />
+            <link from="MUIPinnedScreen (NodeID, WorkspaceID)" to="MUIScreen (NodeID, WorkspaceID)" type="WeakIfEmpty" isEmpty="Username" />
+            <link from="MUIFavoriteWorkspace (WorkspaceID)" to="MUIWorkspace (WorkspaceID)" type="WeakIfEmpty" isEmpty="Username" />
+        </relations>
+        <layout>
+            <table name="Dashboard">
+                <table name="DashboardParameter" uplink="(DashboardID) = (DashboardID)">
+                    <table name="DashboardParameterKvExt" uplink="(NoteID) = (RecordID)" />
+                </table>
+                <table name="Widget" uplink="(DashboardID) = (DashboardID)">
+                    <table name="WidgetKvExt" uplink="(NoteID) = (RecordID)" />
+                </table>
+                <table name="SiteMap" uplink="(ScreenID) = (ScreenID)">
+                    <table name="MUIScreen" uplink="(NodeID) = (NodeID)">
+                        <table name="MUIPinnedScreen" uplink="(NodeID, WorkspaceID) = (NodeID, WorkspaceID)" />
+                    </table>
+                    <table name="MUITile" uplink="(ScreenID) = (ScreenID)" />
+                </table>
+            </table>
+            <table name="MUIWorkspace">
+                <table name="MUIFavoriteWorkspace" uplink="(WorkspaceID) = (WorkspaceID)" />
+            </table>
+            <table name="MUISubcategory" />
+            <table name="MUIArea" />
+        </layout>
+        <data>
+            <Dashboard>
+                <row DashboardID="1000223" Name="Recycle" DefaultOwnerRole="Administrator" ScreenID="DB000042" AllowCopy="1" Workspace1Size="12" Workspace2Size="0" IsPortal="0" ExposeViaMobile="0" NoteID="0eab2142-f6bd-ee11-835c-1293d93768b3">
+                    <Widget WidgetID="2852" Caption="Slurry Processing" Column="0" Row="3" Workspace="0" Width="12" Height="250" Type="PX.Dashboards.Widgets.PXTableWidget" IsActive="1" NoteID="49dd9dde-0dbe-ee11-835c-1293d93768b3">
+                        <column name="Settings"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<TableSettings>
+  <InquiryScreenID>GI640594</InquiryScreenID>
+  <RefreshData>0</RefreshData>
+  <AutoHeight>false</AutoHeight>
+  <Columns>
+    <TableColumn>
+      <DataField>INKitRegister_RefNbr</DataField>
+      <Visible>true</Visible>
+      <Position>0</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>INKitRegister_inventoryID</DataField>
+      <Visible>true</Visible>
+      <Position>1</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>INKitRegister_qty</DataField>
+      <Visible>true</Visible>
+      <Position>2</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>INKitRegister_batchNbr</DataField>
+      <Visible>true</Visible>
+      <Position>3</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>INKitRegister_tranDate</DataField>
+      <Visible>true</Visible>
+      <Position>4</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>InventoryItem_Formula19d8f1dacb6c40daaec36724b1c12f21</DataField>
+      <Visible>true</Visible>
+      <Position>5</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>InventoryItem_Formula493db36db25a43808950485c6149222e</DataField>
+      <Visible>true</Visible>
+      <Position>6</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>InventoryItem_Formula6c11c3471ff847958376dcb12fc358cd</DataField>
+      <Visible>true</Visible>
+      <Position>7</Position>
+    </TableColumn>
+  </Columns>
+</TableSettings>]]></column>
+                    </Widget>
+                    <Widget WidgetID="2851" Column="0" Row="1" Workspace="0" Width="3" Height="280" Type="PX.Dashboards.Widgets.PXWikiWidget" Settings="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;WikiSettings&gt;&#xD;&#xA;  &lt;PageID&gt;0d523302-cc98-4496-b7c7-64933d1d082c&lt;/PageID&gt;&#xD;&#xA;&lt;/WikiSettings&gt;" IsActive="1" NoteID="2dc4e9b5-0cbe-ee11-835c-1293d93768b3" />
+                    <Widget WidgetID="2850" Column="2" Row="1" Workspace="0" Width="3" Height="280" Type="PX.Dashboards.Widgets.PXWikiWidget" Settings="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;WikiSettings&gt;&#xD;&#xA;  &lt;PageID&gt;0060be0f-f890-4493-baa1-2342e2145e23&lt;/PageID&gt;&#xD;&#xA;&lt;/WikiSettings&gt;" IsActive="1" NoteID="d7e9b5b3-0bbe-ee11-835c-1293d93768b3" />
+                    <Widget WidgetID="2848" Column="1" Row="1" Workspace="0" Width="3" Height="280" Type="PX.Dashboards.Widgets.PXWikiWidget" Settings="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;WikiSettings&gt;&#xD;&#xA;  &lt;PageID&gt;f7f21619-e7d2-4ee2-af8c-60c35dad228a&lt;/PageID&gt;&#xD;&#xA;&lt;/WikiSettings&gt;" IsActive="1" NoteID="5f7f847a-0bbe-ee11-835c-1293d93768b3" />
+                    <Widget WidgetID="2844" Column="3" Row="1" Workspace="0" Width="3" Height="280" Type="PX.Dashboards.Widgets.PXWikiWidget" Settings="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;WikiSettings&gt;&#xD;&#xA;  &lt;PageID&gt;09f307c3-e777-431b-b1aa-70843c4327a1&lt;/PageID&gt;&#xD;&#xA;&lt;/WikiSettings&gt;" IsActive="1" NoteID="0e4c7b0d-08be-ee11-835c-1293d93768b3" />
+                    <Widget WidgetID="2842" Caption="Slurry Recieved" Column="0" Row="2" Workspace="0" Width="12" Height="310" Type="PX.Dashboards.Widgets.PXTableWidget" IsActive="1" NoteID="829f297c-febd-ee11-835c-1293d93768b3">
+                        <column name="Settings"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<TableSettings>
+  <InquiryScreenID>HACK1000</InquiryScreenID>
+  <FilterID>6cd044b1-abbd-ee11-835c-1293d93768b3</FilterID>
+  <RefreshData>0</RefreshData>
+  <AutoHeight>false</AutoHeight>
+  <FilterRows>
+    <WidgetFilterRow>
+      <LineNbr>1</LineNbr>
+      <IsActive>true</IsActive>
+      <OpenBrackets>0</OpenBrackets>
+      <DataField>INRegister_extRefNbr</DataField>
+      <Condition>12</Condition>
+      <IsParameter>false</IsParameter>
+      <Value1></Value1>
+      <Value2></Value2>
+      <CloseBrackets>0</CloseBrackets>
+      <Operation>A</Operation>
+    </WidgetFilterRow>
+  </FilterRows>
+  <Columns>
+    <TableColumn>
+      <DataField>ARTran_TranType</DataField>
+      <Width>58</Width>
+      <Visible>true</Visible>
+      <Position>0</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>ARTran_RefNbr</DataField>
+      <Width>114</Width>
+      <Visible>true</Visible>
+      <Position>1</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>ARTran_LineNbr</DataField>
+      <Width>58</Width>
+      <Visible>true</Visible>
+      <Position>2</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>INRegister_RefNbr</DataField>
+      <Width>114</Width>
+      <Visible>true</Visible>
+      <Position>3</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>ARTran_inventoryID</DataField>
+      <Width>114</Width>
+      <Visible>true</Visible>
+      <Position>4</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>ARTran_qty</DataField>
+      <Width>82</Width>
+      <Visible>true</Visible>
+      <Position>5</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>ARTran_customerID</DataField>
+      <Width>115</Width>
+      <Visible>true</Visible>
+      <Position>6</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>ARTran_customerID_description</DataField>
+      <Width>229</Width>
+      <Visible>true</Visible>
+      <Position>7</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>ARTran_tranDate</DataField>
+      <Width>74</Width>
+      <Visible>true</Visible>
+      <Position>8</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>ARTran_Formula90ce725727c54eaba852c0b55ac94b83</DataField>
+      <Width>69</Width>
+      <Visible>true</Visible>
+      <Position>9</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>INRegister_extRefNbr</DataField>
+      <Width>147</Width>
+      <Visible>true</Visible>
+      <Position>10</Position>
+    </TableColumn>
+    <TableColumn>
+      <DataField>INRegister_status</DataField>
+      <Width>80</Width>
+      <Visible>true</Visible>
+      <Position>11</Position>
+    </TableColumn>
+  </Columns>
+</TableSettings>]]></column>
+                    </Widget>
+                    <Widget WidgetID="2841" Caption="Liquid 829 Capacity %" Column="3" Row="0" Workspace="0" Width="3" Height="220" Type="PX.Dashboards.Widgets.KPIScoreWidget" IsActive="1" NoteID="ab1d06b8-fcbd-ee11-835c-1293d93768b3">
+                        <column name="Settings"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<KPIScoreSettings>
+  <InquiryScreenID>GI640593</InquiryScreenID>
+  <RefreshData>5</RefreshData>
+  <AggregateField>INLocation_Formulada971b3fd1194e4f9dada2fd74e5a28e</AggregateField>
+  <AggregateFunction>SUM</AggregateFunction>
+  <NormalColor>Teal</NormalColor>
+  <WarningColor>Yellow</WarningColor>
+  <ErrorColor>Pink</ErrorColor>
+  <NormalLevelType>#fix</NormalLevelType>
+  <NormalLevel>70</NormalLevel>
+  <ErrorLevelType>#fix</ErrorLevelType>
+  <ErrorLevel>80</ErrorLevel>
+  <ErrorLevelField>INLocation_Formulada971b3fd1194e4f9dada2fd74e5a28e</ErrorLevelField>
+  <VisualizationType>gauge</VisualizationType>
+  <FilterRows>
+    <WidgetFilterRow>
+      <LineNbr>-2147483646</LineNbr>
+      <IsActive>true</IsActive>
+      <OpenBrackets>0</OpenBrackets>
+      <DataField>INLocationStatus_InventoryID</DataField>
+      <Condition>0</Condition>
+      <IsParameter>false</IsParameter>
+      <Value1>ACU-LIQUID 829</Value1>
+      <CloseBrackets>0</CloseBrackets>
+      <Operation>A</Operation>
+    </WidgetFilterRow>
+  </FilterRows>
+</KPIScoreSettings>]]></column>
+                    </Widget>
+                    <Widget WidgetID="2840" Caption="Water Capacity %" Column="2" Row="0" Workspace="0" Width="3" Height="220" Type="PX.Dashboards.Widgets.KPIScoreWidget" IsActive="1" NoteID="b90c14a0-fcbd-ee11-835c-1293d93768b3">
+                        <column name="Settings"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<KPIScoreSettings>
+  <InquiryScreenID>GI640593</InquiryScreenID>
+  <RefreshData>5</RefreshData>
+  <AggregateField>INLocation_Formulada971b3fd1194e4f9dada2fd74e5a28e</AggregateField>
+  <AggregateFunction>SUM</AggregateFunction>
+  <NormalColor>Teal</NormalColor>
+  <WarningColor>Yellow</WarningColor>
+  <ErrorColor>Pink</ErrorColor>
+  <NormalLevelType>#fix</NormalLevelType>
+  <NormalLevel>70</NormalLevel>
+  <ErrorLevelType>#fix</ErrorLevelType>
+  <ErrorLevel>80</ErrorLevel>
+  <ErrorLevelField>INLocation_Formulada971b3fd1194e4f9dada2fd74e5a28e</ErrorLevelField>
+  <VisualizationType>gauge</VisualizationType>
+  <FilterRows>
+    <WidgetFilterRow>
+      <LineNbr>-2147483646</LineNbr>
+      <IsActive>true</IsActive>
+      <OpenBrackets>0</OpenBrackets>
+      <DataField>INLocationStatus_InventoryID</DataField>
+      <Condition>0</Condition>
+      <IsParameter>false</IsParameter>
+      <Value1>ACU-WATER</Value1>
+      <CloseBrackets>0</CloseBrackets>
+      <Operation>A</Operation>
+    </WidgetFilterRow>
+  </FilterRows>
+</KPIScoreSettings>]]></column>
+                    </Widget>
+                    <Widget WidgetID="2839" Caption="Slurry Capacity %" Column="0" Row="0" Workspace="0" Width="3" Height="220" Type="PX.Dashboards.Widgets.KPIScoreWidget" IsActive="1" NoteID="7f40695a-fcbd-ee11-835c-1293d93768b3">
+                        <column name="Settings"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<KPIScoreSettings>
+  <InquiryScreenID>GI640593</InquiryScreenID>
+  <RefreshData>5</RefreshData>
+  <AggregateField>INLocation_Formulada971b3fd1194e4f9dada2fd74e5a28e</AggregateField>
+  <AggregateFunction>SUM</AggregateFunction>
+  <NormalColor>Teal</NormalColor>
+  <WarningColor>Yellow</WarningColor>
+  <ErrorColor>Pink</ErrorColor>
+  <NormalLevelType>#fix</NormalLevelType>
+  <NormalLevel>70</NormalLevel>
+  <ErrorLevelType>#fix</ErrorLevelType>
+  <ErrorLevel>80</ErrorLevel>
+  <ErrorLevelField>INLocation_Formulada971b3fd1194e4f9dada2fd74e5a28e</ErrorLevelField>
+  <VisualizationType>gauge</VisualizationType>
+  <FilterRows>
+    <WidgetFilterRow>
+      <LineNbr>-2147483646</LineNbr>
+      <IsActive>true</IsActive>
+      <OpenBrackets>0</OpenBrackets>
+      <DataField>INLocationStatus_InventoryID</DataField>
+      <Condition>0</Condition>
+      <IsParameter>false</IsParameter>
+      <Value1>ACU-SLURRY</Value1>
+      <CloseBrackets>0</CloseBrackets>
+      <Operation>A</Operation>
+    </WidgetFilterRow>
+  </FilterRows>
+</KPIScoreSettings>]]></column>
+                    </Widget>
+                    <Widget WidgetID="2837" Caption="Solid Waste Capacity %" Column="1" Row="0" Workspace="0" Width="3" Height="220" Type="PX.Dashboards.Widgets.KPIScoreWidget" IsActive="1" NoteID="63edc152-fbbd-ee11-835c-1293d93768b3">
+                        <column name="Settings"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<KPIScoreSettings>
+  <InquiryScreenID>GI640593</InquiryScreenID>
+  <RefreshData>5</RefreshData>
+  <AggregateField>INLocation_Formulada971b3fd1194e4f9dada2fd74e5a28e</AggregateField>
+  <AggregateFunction>SUM</AggregateFunction>
+  <NormalColor>Teal</NormalColor>
+  <WarningColor>Yellow</WarningColor>
+  <ErrorColor>Pink</ErrorColor>
+  <NormalLevelType>#fix</NormalLevelType>
+  <NormalLevel>70</NormalLevel>
+  <ErrorLevelType>#fix</ErrorLevelType>
+  <ErrorLevel>80</ErrorLevel>
+  <ErrorLevelField>INLocation_Formulada971b3fd1194e4f9dada2fd74e5a28e</ErrorLevelField>
+  <VisualizationType>gauge</VisualizationType>
+  <FilterRows>
+    <WidgetFilterRow>
+      <LineNbr>-2147483646</LineNbr>
+      <IsActive>true</IsActive>
+      <OpenBrackets>0</OpenBrackets>
+      <DataField>INLocationStatus_InventoryID</DataField>
+      <Condition>0</Condition>
+      <IsParameter>false</IsParameter>
+      <Value1>ACU-WASTE</Value1>
+      <CloseBrackets>0</CloseBrackets>
+      <Operation>A</Operation>
+    </WidgetFilterRow>
+  </FilterRows>
+</KPIScoreSettings>]]></column>
+                    </Widget>
+                    <SiteMap Title="Recycle" Url="~/Frames/Default.aspx" NodeID="f2af320c-35c0-4a85-bdab-72bbd8c4c2c7" ParentID="00000000-0000-0000-0000-000000000000" SelectedUI="E">
+                        <MUIScreen IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="10" SubcategoryID="29d8e453-ee74-405d-abe1-930728d1f9ba">
+                            <MUIPinnedScreen IsPortal="0" Username="" IsPinned="1" />
+                        </MUIScreen>
+                    </SiteMap>
+                </row>
+            </Dashboard>
+            <MUIWorkspace>
+                <row IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="16" Title="AcuCycle" Icon="refresh" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" IsSystem="0" />
+            </MUIWorkspace>
+            <MUISubcategory>
+                <row IsPortal="1" SubcategoryID="29d8e453-ee74-405d-abe1-930728d1f9ba" Order="1478" Name="Dashboards" Icon="" IsSystem="1" />
+                <row IsPortal="0" SubcategoryID="29d8e453-ee74-405d-abe1-930728d1f9ba" Order="1478" Name="Dashboards" Icon="" IsSystem="1" />
+            </MUISubcategory>
+            <MUIArea>
+                <row IsPortal="0" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" Order="20" Name="Operations" />
+            </MUIArea>
+        </data>
+    </data-set>
+</Dashboard>

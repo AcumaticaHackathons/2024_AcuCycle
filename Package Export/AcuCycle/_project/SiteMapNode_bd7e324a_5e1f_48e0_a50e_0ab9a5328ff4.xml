@@ -26,14 +26,16 @@
         <data>
             <SiteMap>
                 <row Position="21519" Title="Recycle Entry" Url="~/Pages/AC/AC301000.aspx" ScreenID="AC301000" NodeID="bd7e324a-5e1f-48e0-a50e-0ab9a5328ff4" ParentID="00000000-0000-0000-0000-000000000000" SelectedUI="E">
-                    <MUIScreen IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="10" SubcategoryID="6d40b0b6-18f4-4139-adac-8ec8cb2a17ea" />
+                    <MUIScreen IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="10" SubcategoryID="38d13a6e-3076-42fb-9fce-62fa33897da6">
+                        <MUIPinnedScreen IsPortal="0" Username="" IsPinned="1" />
+                    </MUIScreen>
                 </row>
             </SiteMap>
             <MUIWorkspace>
-                <row IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="875" Title="AcuCycle" Icon="refresh" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" IsSystem="0" />
+                <row IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="16" Title="AcuCycle" Icon="refresh" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" IsSystem="0" />
             </MUIWorkspace>
             <MUISubcategory>
-                <row IsPortal="0" SubcategoryID="6d40b0b6-18f4-4139-adac-8ec8cb2a17ea" Order="128" Name="Profiles" Icon="" IsSystem="0" />
+                <row IsPortal="0" SubcategoryID="38d13a6e-3076-42fb-9fce-62fa33897da6" Order="64" Name="Transactions" Icon="" IsSystem="0" />
             </MUISubcategory>
             <MUIArea>
                 <row IsPortal="0" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" Order="20" Name="Operations" />

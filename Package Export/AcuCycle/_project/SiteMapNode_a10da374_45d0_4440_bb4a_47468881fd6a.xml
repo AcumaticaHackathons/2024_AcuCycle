@@ -30,7 +30,7 @@
                 </row>
             </SiteMap>
             <MUIWorkspace>
-                <row IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="875" Title="AcuCycle" Icon="refresh" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" IsSystem="0" />
+                <row IsPortal="0" WorkspaceID="be5264cb-7ddd-4343-b76d-1f4f2feb1301" Order="16" Title="AcuCycle" Icon="refresh" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" IsSystem="0" />
             </MUIWorkspace>
             <MUISubcategory>
                 <row IsPortal="0" SubcategoryID="32130442-2305-4394-9389-cf915b191d2a" Order="820" Name="Processes" Icon="" IsSystem="0" />
