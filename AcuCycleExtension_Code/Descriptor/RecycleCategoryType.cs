@@ -8,6 +8,7 @@ namespace AcuCycle
         {
             public ListAttribute()
                 : base(
+                    Pair(null, ""),
                     Pair(Waste, "Waste"),
                     Pair(Recycle, "Recycle"),
                     Pair(Refurbish, "Refurbish"),

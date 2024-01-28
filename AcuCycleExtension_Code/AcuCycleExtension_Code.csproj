@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="DACExtensions\BAccountExt.cs" />
     <Compile Include="DACExtensions\INLocationExt.cs" />
+    <Compile Include="DACExtensions\INSetupExt.cs" />
     <Compile Include="DACExtensions\InventoryItemExt.cs" />
     <Compile Include="Descriptor\RecycleCategoryType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
