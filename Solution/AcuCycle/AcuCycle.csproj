@@ -73,10 +73,16 @@
   <ItemGroup>
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\RecycleAutoNumber.cs" />
+    <Compile Include="Common\RecycleCategoryType.cs" />
+    <Compile Include="DACExt\BAccountExt.cs" />
+    <Compile Include="DACExt\INLocationExt.cs" />
     <Compile Include="DACExt\INLocationStatusExt.cs" />
+    <Compile Include="DACExt\INSetupExt.cs" />
+    <Compile Include="DACExt\InventoryItemExt.cs" />
     <Compile Include="DAC\ACRecycleDetails .cs" />
     <Compile Include="DAC\ACRecycleHeader.cs" />
     <Compile Include="DAC\ACRecycleSetup.cs" />
+    <Compile Include="GraphExt\KitAssemblyEntryExt.cs" />
     <Compile Include="Graph\ACRecycleEntry.cs" />
     <Compile Include="Graph\ACRecycleSetupMaint.cs" />
     <Compile Include="Graph\ACRecycleWizard.cs" />
@@ -90,9 +96,7 @@
       <Version>6.0.0</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GraphExt\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

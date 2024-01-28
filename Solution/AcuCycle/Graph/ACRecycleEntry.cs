@@ -46,14 +46,18 @@ namespace AcuCycle
                     {
                         DocType = INDocType.Disassembly
                     });
+
                     InventoryItem item = InventoryItem.PK.Find(kitGraph, tran.InventoryID);
+                    INSetup inSetup = kitGraph.Setup.Current;
+                    INSetupExt inSetupExt = inSetup.GetExtension<INSetupExt>();
+
                     register.InventoryID = tran.InventoryID;
-                    register.ReasonCode = "DISASSEMBLY";
+                    register.ReasonCode = inSetupExt.UsrRecycleReason;
                     register.SiteID = tran.SiteID;
                     register.Qty = tran.Qty;
                     register.TranDesc = "Recycled Entry Generated - " + PX.Common.PXTimeZoneInfo.Now;
                     kitGraph.Document.Update(register);
-                    register.UOM = item.BaseUnit;
+                    //register.UOM = item.BaseUnit;
 
                     foreach (INComponentTran component in kitGraph.Components.Select())
                     {

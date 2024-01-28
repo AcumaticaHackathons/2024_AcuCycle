@@ -14,6 +14,10 @@
   <col name="LastModifiedByScreenID" type="Char(8)" />
   <col name="LastModifiedDateTime" type="DateTime" />
   <col name="NoteID" type="UniqueIdentifier" />
+  <index name="ACRecycleHeader_NoteID" unique="true">
+    <col name="NoteID" />
+    <col name="CompanyID" />
+  </index>
   <index name="PK_ACRecycleHeader" clustered="true" primary="true" unique="true">
     <col name="CompanyID" />
     <col name="DocType" />
