@@ -6,8 +6,8 @@
     <ProjectGuid>{6925A3AC-6002-4375-A3F7-7155542FB4F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TacPG</RootNamespace>
-    <AssemblyName>TacPG</AssemblyName>
+    <RootNamespace>AcuCycle</RootNamespace>
+    <AssemblyName>AcuCycleExtension</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -66,9 +66,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DACExtensions\BAccountExt.cs" />
+    <Compile Include="DACExtensions\INLocationExt.cs" />
+    <Compile Include="DACExtensions\InventoryItemExt.cs" />
+    <Compile Include="Descriptor\RecycleCategoryType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="GraphExtensions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

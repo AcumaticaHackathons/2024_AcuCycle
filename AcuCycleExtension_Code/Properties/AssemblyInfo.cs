@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Acumatica Customization")]
+[assembly: AssemblyTitle("AcuCycle")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hackathon")]
@@ -30,6 +30,6 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("22.212.0046.2305")]
-[assembly: AssemblyFileVersion("22.212.0046.2305")]
+[assembly: AssemblyVersion("24.01.27.0000")]
+[assembly: AssemblyFileVersion("24.01.27.0000")]
 [assembly: NeutralResourcesLanguage("en-US")]
