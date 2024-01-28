@@ -16,7 +16,7 @@ namespace PX.Objects.IN
         #region UsrRecycleReason
         [PXDBString(20)]
         [PXUIField(DisplayName = "Recycle Reason Code")]
-        [PXSelector(typeof(Search<ReasonCode.reasonCodeID, Where<ReasonCode.usage, Equal<ReasonCodeUsages.issue>>>), DescriptionField = typeof(ReasonCode.descr))]
+        [PXSelector(typeof(Search<ReasonCode.reasonCodeID, Where<ReasonCode.usage, Equal<ReasonCodeUsages.assemblyDisassembly>>>), DescriptionField = typeof(ReasonCode.descr))]
         public string UsrRecycleReason { get; set; }
         public abstract class usrRecycleReason : PX.Data.BQL.BqlString.Field<usrRecycleReason> { }
         #endregion

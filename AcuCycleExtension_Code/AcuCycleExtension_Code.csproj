@@ -71,7 +71,7 @@
     <Compile Include="DACExtensions\INSetupExt.cs" />
     <Compile Include="DACExtensions\InventoryItemExt.cs" />
     <Compile Include="Descriptor\RecycleCategoryType.cs" />
-    <Compile Include="GraphExtensions\INIssueEntry_Extension.cs" />
+    <Compile Include="GraphExtensions\KitAssemblyEntry_Extension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
