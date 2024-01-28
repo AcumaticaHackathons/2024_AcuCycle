@@ -1,4 +1,0 @@
-﻿<Table TableName="INLocation">
-    <Column TableName="INLocation" ColumnName="UsrCapacity" ColumnType="decimal" AllowNull="True" DecimalPrecision="6" DecimalLength="19" IsNewColumn="True" IsUnicode="True" />
-    <Column TableName="INLocation" ColumnName="UsrUOM" ColumnType="string" AllowNull="True" MaxLength="6" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
-</Table>

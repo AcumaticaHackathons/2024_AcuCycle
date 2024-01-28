@@ -1,4 +1,0 @@
-﻿<Table TableName="BAccount">
-    <Column TableName="BAccount" ColumnName="UsrBuyRecycle" ColumnType="bool" AllowNull="True" MaxLength="25" DecimalPrecision="2" IsNewColumn="True" IsUnicode="True" />
-    <Column TableName="BAccount" ColumnName="UsrSaleRecycle" ColumnType="bool" AllowNull="True" MaxLength="25" DecimalPrecision="2" IsNewColumn="True" IsUnicode="True" />
-</Table>

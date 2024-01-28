@@ -1,3 +1,0 @@
-﻿<Table TableName="INSetup">
-    <Column TableName="INSetup" ColumnName="UsrRecycleReason" ColumnType="string" AllowNull="True" MaxLength="20" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
-</Table>
