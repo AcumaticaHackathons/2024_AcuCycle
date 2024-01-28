@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# PX1016: A DAC extension must include the public static IsActive method with the bool return type. Extensions which are constantly active reduce performance. Suppress the error if you need the DAC extension to be constantly active.
+dotnet_diagnostic.PX1016.severity = none
