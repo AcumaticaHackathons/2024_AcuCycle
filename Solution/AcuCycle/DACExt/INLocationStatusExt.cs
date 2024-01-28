@@ -2,7 +2,7 @@
 using PX.Objects.IN;
 using System;
 
-namespace cwBethelWise
+namespace AcuCycle
 {
     public sealed class INLocationStatusExt : PXCacheExtension<INLocationStatus>
     {

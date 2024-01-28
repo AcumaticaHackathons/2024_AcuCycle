@@ -20,7 +20,7 @@ namespace AcuCycle
         #region RefNbr
         [PXDBString(15, IsKey = true)]
         [PXDBDefault(typeof(ACRecycleHeader.refNbr), DefaultForUpdate = false)]
-        //[PXParent(typeof(Select<ACRecycleHeader, Where<ACRecycleHeader.refNbr.IsEqual<ACRecycleDetails.refNbr>.And<ACRecycleHeader.docType.IsEqual<ACRecycleDetails.docType>>>>))]
+        [PXParent(typeof(Select<ACRecycleHeader, Where<ACRecycleHeader.refNbr.IsEqual<ACRecycleDetails.refNbr.FromCurrent>.And<ACRecycleHeader.docType.IsEqual<ACRecycleDetails.docType.FromCurrent>>>>))]
         [PXUIField(DisplayName = "Ref Nbr")]
         public virtual string RefNbr { get; set; }
         public abstract class refNbr : PX.Data.BQL.BqlString.Field<refNbr> { }

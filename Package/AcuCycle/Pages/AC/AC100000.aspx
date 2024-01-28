@@ -3,7 +3,7 @@
 
 <asp:Content ID="cont1" ContentPlaceHolderID="phDS" Runat="Server">
 	<px:PXDataSource ID="ds" runat="server" Visible="True" Width="100%"
-        TypeName="AcuCycle.RecycleSetupMaint"
+        TypeName="AcuCycle.ACRecycleSetupMaint"
         PrimaryView="Setup"
         >
 		<CallbackCommands>
@@ -15,7 +15,10 @@
 	<px:PXFormView ID="form" runat="server" DataSourceID="ds" DataMember="Setup" Width="100%" AllowAutoHide="false">
 		<Template>
 			<px:PXLayoutRule ID="PXLayoutRule1" runat="server" StartRow="True"></px:PXLayoutRule>
-			<px:PXSelector runat="server" ID="CstPXSelector1" DataField="SiteID" /></Template>
+			<px:PXLayoutRule runat="server" ID="CstPXLayoutRule2" StartGroup="True" GroupCaption="General Settings" />
+			<px:PXSelector CommitChanges="True" runat="server" ID="CstPXSelector1" DataField="RefNumberingID" ></px:PXSelector>
+			<px:PXSelector CommitChanges="True" runat="server" ID="CstPXSelector2" DataField="SiteID" ></px:PXSelector>
+		</Template>
 		<AutoSize Container="Window" Enabled="True" MinHeight="200" ></AutoSize>
 	</px:PXFormView>
 </asp:Content>

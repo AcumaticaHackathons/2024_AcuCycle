@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using PX.Common;
 using PX.Data;
 using PX.Data.BQL;
 using PX.Data.BQL.Fluent;
@@ -31,17 +32,19 @@ namespace AcuCycle
         [PXButton()]
         public virtual IEnumerable createRecycleDoc(PXAdapter adapter)
         {
-            ACRecycleEntry recGraph = PXGraph.CreateInstance<ACRecycleEntry>();
             List<INLocationStatus> results = Results.Select().RowCast<INLocationStatus>().ToList();
-            PXLongOperation.StartOperation(this, delegate ()
+            
+            ACRecycleEntry graph = PXGraph.CreateInstance<ACRecycleEntry>();
+            ACRecycleHeader header = graph.Document.Insert();
+            graph.Document.Current = header;
+            header.Desc = "Wizard Created Entry - " + PX.Common.PXTimeZoneInfo.Now;
+            graph.Document.Update(header);
+            graph.Actions.PressSave();
+
+            foreach (INLocationStatus result in results)
             {
-                ACRecycleEntry graph = PXGraph.CreateInstance<ACRecycleEntry>();
-                ACRecycleHeader header = graph.Document.Insert();
-
-                graph.Document.Current = header;
-                graph.Actions.PressSave();
-
-                foreach (INLocationStatus result in results)
+                INLocationStatusExt resultExt = result.GetExtension<INLocationStatusExt>();
+                if (resultExt.Selected ?? false)
                 {
                     ACRecycleDetails details = graph.Transactions.Insert();
                     graph.Transactions.Current = details;
@@ -52,10 +55,9 @@ namespace AcuCycle
                     graph.Transactions.Update(details);
                     graph.Actions.PressSave();
                 }
-                recGraph = graph;
-            });
+            }
 
-            throw new PXRedirectRequiredException(recGraph, "Purchase Order");
+            throw new PXRedirectRequiredException(graph, "Purchase Order");
             //return adapter.Get();
         }
         #endregion
