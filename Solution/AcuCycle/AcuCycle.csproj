@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build"
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ACUPath>..\..\..\..\AcuInstances</ACUPath>
     <ACUInstance>Hackathon</ACUInstance>
@@ -56,6 +55,10 @@
       <Private>False</Private>
       <HintPath>$(ACUPath)\$(ACUInstance)\Bin\PX.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PX.Data.BQL.Fluent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\AcuInstances\Hackathon\Bin\PX.Data.BQL.Fluent.dll</HintPath>
+    </Reference>
     <Reference Include="PX.Objects">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
@@ -68,8 +71,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAC\RecycleSetup.cs" />
-    <Compile Include="Graph\RecycleSetupMaint.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\RecycleAutoNumber.cs" />
+    <Compile Include="DACExt\INLocationStatusExt.cs" />
+    <Compile Include="DAC\ACRecycleDetails .cs" />
+    <Compile Include="DAC\ACRecycleHeader.cs" />
+    <Compile Include="DAC\ACRecycleSetup.cs" />
+    <Compile Include="Graph\ACRecycleEntry.cs" />
+    <Compile Include="Graph\ACRecycleSetupMaint.cs" />
+    <Compile Include="Graph\ACRecycleWizard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,7 +91,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DACExt\" />
     <Folder Include="GraphExt\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
