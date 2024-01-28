@@ -9,13 +9,6 @@ namespace AcuCycle
     [PXCacheName("AC Recycle Header")]
     public class ACRecycleHeader : IBqlTable
     {
-        #region Behavior
-        [PXDBString(2, IsFixed = true, InputMask = "")]
-        [PXUIField(DisplayName = "Behavior")]
-        public virtual string Behavior { get; set; }
-        public abstract class behavior : PX.Data.BQL.BqlString.Field<behavior> { }
-        #endregion
-
         #region DocType
         [PXDBString(5, InputMask = "", IsKey = true)]
         [PXDefault("RY")]
@@ -34,6 +27,13 @@ namespace AcuCycle
         public abstract class refNbr : PX.Data.BQL.BqlString.Field<refNbr> { }
         #endregion
 
+        #region Behavior
+        [PXDBString(2, IsFixed = true, InputMask = "")]
+        [PXUIField(DisplayName = "Behavior")]
+        public virtual string Behavior { get; set; }
+        public abstract class behavior : PX.Data.BQL.BqlString.Field<behavior> { }
+        #endregion
+
         #region LineCntr
         [PXDBInt()]
         [PXDefault(0)]
@@ -48,6 +48,14 @@ namespace AcuCycle
         [PXUIField(DisplayName = "Description", Required = true)]
         public virtual string Desc { get; set; }
         public abstract class desc : PX.Data.BQL.BqlString.Field<desc> { }
+        #endregion
+
+        #region IsRecycled
+        [PXDBBool()]
+        [PXDefault(false)]
+        [PXUIField(DisplayName = "Is Recycled")]
+        public virtual bool? IsRecycled { get; set; }
+        public abstract class isRecycled : PX.Data.BQL.BqlBool.Field<isRecycled> { }
         #endregion
 
         #region Tstamp

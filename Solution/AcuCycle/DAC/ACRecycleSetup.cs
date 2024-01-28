@@ -26,6 +26,13 @@ namespace AcuCycle
         public abstract class siteID : PX.Data.BQL.BqlInt.Field<siteID> { }
         #endregion
 
+        #region ChargeFeeID
+        [NonStockItem]
+        [PXUIField(DisplayName = "Recycle Charge Fee Item")]
+        public int? ChargeFeeID { get; set; }
+        public abstract class chargeFeeID : PX.Data.BQL.BqlInt.Field<chargeFeeID> { }
+        #endregion
+
         #region Tstamp
         [PXDBTimestamp()]
         [PXUIField(DisplayName = "Tstamp")]

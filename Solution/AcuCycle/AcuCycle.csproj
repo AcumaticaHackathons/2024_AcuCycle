@@ -75,6 +75,7 @@
     <Compile Include="Common\RecycleAutoNumber.cs" />
     <Compile Include="Common\RecycleCategoryType.cs" />
     <Compile Include="DACExt\BAccountExt.cs" />
+    <Compile Include="DACExt\INRegisterExt.cs" />
     <Compile Include="DACExt\INLocationExt.cs" />
     <Compile Include="DACExt\INLocationStatusExt.cs" />
     <Compile Include="DACExt\INSetupExt.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="DAC\ACRecycleHeader.cs" />
     <Compile Include="DAC\ACRecycleSetup.cs" />
     <Compile Include="GraphExt\KitAssemblyEntryExt.cs" />
+    <Compile Include="Graph\ACProcBinCap.cs" />
     <Compile Include="Graph\ACRecycleEntry.cs" />
     <Compile Include="Graph\ACRecycleSetupMaint.cs" />
     <Compile Include="Graph\ACRecycleWizard.cs" />

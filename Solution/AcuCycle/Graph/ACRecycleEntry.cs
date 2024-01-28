@@ -34,6 +34,8 @@ namespace AcuCycle
         {
             ACRecycleHeader current = Document.Current;
             if (current == null) return adapter.Get();
+            PXException error = null;
+
             PXLongOperation.StartOperation(this, delegate ()
             {
                 ACRecycleEntry recycleGraph = PXGraph.CreateInstance<ACRecycleEntry>();
@@ -41,54 +43,86 @@ namespace AcuCycle
 
                 foreach (ACRecycleDetails tran in recycleGraph.Transactions.Select())
                 {
-                    KitAssemblyEntry kitGraph = PXGraph.CreateInstance<KitAssemblyEntry>();
-                    INKitRegister register = kitGraph.Document.Insert(new INKitRegister()
+                    if (tran?.AssemblyRefNbr == null)
                     {
-                        DocType = INDocType.Disassembly
-                    });
-
-                    InventoryItem item = InventoryItem.PK.Find(kitGraph, tran.InventoryID);
-                    INSetup inSetup = kitGraph.Setup.Current;
-                    INSetupExt inSetupExt = inSetup.GetExtension<INSetupExt>();
-
-                    register.InventoryID = tran.InventoryID;
-                    register.ReasonCode = inSetupExt.UsrRecycleReason;
-                    register.SiteID = tran.SiteID;
-                    register.Qty = tran.Qty;
-                    register.TranDesc = "Recycled Entry Generated - " + PX.Common.PXTimeZoneInfo.Now;
-                    kitGraph.Document.Update(register);
-                    //register.UOM = item.BaseUnit;
-
-                    foreach (INComponentTran component in kitGraph.Components.Select())
-                    {
-                        INLocation location = SelectFrom<INLocation>.
-                            Where<INLocation.siteID.IsEqual<P.AsInt>.
-                            And<INLocation.primaryItemID.IsEqual<P.AsInt>>>.View.
-                        Select(kitGraph, tran.SiteID, component.InventoryID).TopFirst;
-
-                        if (location?.LocationID != null)
+                        try
                         {
-                            component.SiteID = location.SiteID;
-                            component.LocationID = location.LocationID;
+                            KitAssemblyEntry kitGraph = PXGraph.CreateInstance<KitAssemblyEntry>();
+                            INKitRegister register = kitGraph.Document.Insert(new INKitRegister()
+                            {
+                                DocType = INDocType.Disassembly
+                            });
 
-                            kitGraph.Components.Update(component);
+                            InventoryItem item = InventoryItem.PK.Find(kitGraph, tran.InventoryID);
+                            INSetup inSetup = kitGraph.Setup.Current;
+                            INSetupExt inSetupExt = inSetup.GetExtension<INSetupExt>();
+
+                            register.InventoryID = tran.InventoryID;
+                            register.ReasonCode = inSetupExt.UsrRecycleReason;
+                            register.SiteID = tran.SiteID;
+                            register.Qty = tran.Qty;
+                            register.TranDesc = "Recycled Entry Generated - " + PX.Common.PXTimeZoneInfo.Now;
+                            kitGraph.Document.Update(register);
+
+                            foreach (INComponentTran component in kitGraph.Components.Select())
+                            {
+                                kitGraph.Components.Current = component;
+
+                                INLocation location = SelectFrom<INLocation>.
+                                    Where<INLocation.siteID.IsEqual<P.AsInt>.
+                                    And<INLocation.primaryItemID.IsEqual<P.AsInt>>>.View.
+                                Select(kitGraph, tran.SiteID, component.InventoryID).TopFirst;
+
+                                if (location?.LocationID != null)
+                                {
+                                    component.SiteID = location.SiteID;
+                                    kitGraph.Components.Update(component);
+
+                                    component.LocationID = location.LocationID;
+                                    kitGraph.Components.Update(component);
+                                }
+                            }
+                            kitGraph.Actions.PressSave();
+
+                            kitGraph.releaseFromHold.Press();
+                            kitGraph.release.Press();
+
+                            tran.AssemblyDocType = kitGraph.Document.Current.DocType;
+                            tran.AssemblyRefNbr = kitGraph.Document.Current.RefNbr;
+
+                            recycleGraph.Transactions.Update(tran);
+                            recycleGraph.Actions.PressSave();
+                        }
+                        catch (PXException ex)
+                        {
+                            if (error == null)
+                            {
+                                error = ex;
+                            }
                         }
                     }
-                    kitGraph.Actions.PressSave();
+                }
 
-                    kitGraph.releaseFromHold.Press();
-                    kitGraph.release.Press();
-
-                    tran.AssemblyDocType = kitGraph.Document.Current.DocType;
-                    tran.AssemblyRefNbr = kitGraph.Document.Current.RefNbr;
-
-                    recycleGraph.Transactions.Update(tran);
+                if (error == null)
+                {
+                    current.IsRecycled = true;
+                    recycleGraph.Document.Update(current);
                     recycleGraph.Actions.PressSave();
+                }
+                else
+                {
+                    current.IsRecycled = false;
                 }
             });
 
-            return adapter.Get();
-
+            if (error != null)
+            {
+                throw error;
+            }
+            else
+            {
+                return adapter.Get();
+            }
         }
         #endregion
     }

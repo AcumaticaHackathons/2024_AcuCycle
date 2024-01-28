@@ -2,6 +2,7 @@
     <CDATA name="TableSchemaXml"><![CDATA[<table name="ACRecycleSetup">
   <col name="CompanyID" type="Int" default="Zero" />
   <col name="RefNumberingID" type="NVarChar(10)" />
+  <col name="ChargeFeeID" type="Int" nullable="true" />
   <col name="SiteID" type="Int" />
   <col name="tstamp" type="Timestamp" />
   <col name="CreatedByID" type="UniqueIdentifier" />

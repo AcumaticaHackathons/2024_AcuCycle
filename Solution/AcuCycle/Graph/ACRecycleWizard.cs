@@ -21,7 +21,11 @@ namespace AcuCycle
         public PXSetup<ACRecycleSetup> Setup;
 
         public SelectFrom<INLocationStatus>.
+            InnerJoin<InventoryItem>.
+                On<InventoryItem.inventoryID.IsEqual<INLocationStatus.inventoryID>>.
             Where<INLocationStatus.siteID.IsEqual<ACRecycleSetup.siteID.FromCurrent>
+                .And<INLocationStatus.qtyHardAvail.IsGreater<decimal_0>>
+                .And<InventoryItem.kitItem.IsEqual<True>>
                 .And<Brackets<INLocationStatus.inventoryID.IsEqual<ACRecycleWizardFilter.inventoryID.FromCurrent>
                     .Or<ACRecycleWizardFilter.inventoryID.FromCurrent.IsNull>>>>.View Results;
         #endregion
@@ -57,7 +61,7 @@ namespace AcuCycle
                 }
             }
 
-            throw new PXRedirectRequiredException(graph, "Purchase Order");
+            throw new PXRedirectRequiredException(graph, "Recycle Entry");
             //return adapter.Get();
         }
         #endregion

@@ -1,4 +1,8 @@
 ﻿using PX.Data;
+using PX.Data.BQL;
+using PX.Objects.AP;
+using PX.Objects.AR;
+using PX.Objects.CR;
 using PX.Objects.IN;
 using System;
 

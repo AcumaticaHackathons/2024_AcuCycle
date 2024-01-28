@@ -56,6 +56,7 @@ namespace AcuCycle
         #endregion
 
         #region LocationID
+        [PXDBInt()]
         [PXSelector(typeof(Search<INLocation.locationID, Where<INLocation.siteID.IsEqual<ACRecycleDetails.siteID.FromCurrent>>>), SubstituteKey = typeof(INLocation.locationCD))]
         [PXUIField(DisplayName = "Location ID")]
         public virtual int? LocationID { get; set; }
